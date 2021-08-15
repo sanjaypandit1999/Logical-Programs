@@ -8,16 +8,14 @@ package com.bridgelabz.utility;
  * @since 13-08-2021
  */
 public class Utility {
-    public void series(int n1, int n2, int nth){
-        int sum = 0;
-        for (int i = 1; i <= nth; i++) {
-
-            //sum of previous two terms
-            sum = n1 + n2;
-            //updating value of previous terms
-            n1 = n2;
-            n2 = sum;
-            System.out.println(sum);
+    public int isPerfect(int num){
+        int sum=0;               //executes until the condition becomes false
+        for(int i=1; i <= num/2; i++) {
+            if (num % i == 0) {
+                //calculates the sum of factors
+                sum = sum + i;
+            }
         }
+        return sum;
     }
 }
