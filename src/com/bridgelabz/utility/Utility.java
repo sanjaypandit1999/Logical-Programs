@@ -32,4 +32,16 @@ public class Utility {
             }
         }
     }
+    public int number(int num) {
+        int reminder;
+        int rev = 0;
+        //untill num = 0
+        while (num != 0) {
+            reminder = num % 10; //it's thegven number lastdigit number
+            num = num / 10; //without ast digit
+            rev = rev * 10 + reminder; //rverse the num one bye one untill 0;
+        }
+        return rev;
+    }
+
 }
